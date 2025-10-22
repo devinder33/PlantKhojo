@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_200">#2EC06F</color>
+    <color name="green_500">#2EC06F</color>
+    <color name="green_700">#214B36</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="aquaticMist">#ABE6DA</color>
+    <color name="gray">#BDBDBD</color>
+    <color name="offWhite">#A5A2A2</color>
+</resources>
