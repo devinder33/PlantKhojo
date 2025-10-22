@@ -6,3 +6,8 @@ plugins {
     alias(libs.plugins.kotlin.ksp) apply false
     alias(libs.plugins.hilt.android) apply false
 }
+
+// Project Git repository URL
+project.ext {
+    set("vcsUrl", "git@github.com:devinder33/PlantKhojo.git")
+}

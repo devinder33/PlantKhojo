@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.hilt.android)
+    `maven-publish`
 }
 
 android {
@@ -60,6 +61,28 @@ android {
             excludes += "META-INF/netty-*"
             excludes += "META-INF/*.properties"
             excludes += "META-INF/native-image/**"
+        }
+    }
+}
+
+// Add SCM (Source Control Management) information for the project
+// This can be used by tools to identify the location of the source code repository.
+project.afterEvaluate {
+    extensions.findByName("publishing")?.let {
+        (this as org.gradle.api.Project).extensions.configure<org.gradle.api.publish.PublishingExtension>(
+            "publishing"
+        ) {
+            publications {
+                create("mavenRelease", org.gradle.api.publish.maven.MavenPublication::class.java) {
+                    pom {
+                        scm {
+                            url.set("https://github.com/devinder33/PlantKhojo")
+                            connection.set("scm:git:git@github.com:devinder33/PlantKhojo.git")
+                            developerConnection.set("scm:git:git@github.com:devinder33/PlantKhojo.git")
+                        }
+                    }
+                }
+            }
         }
     }
 }
