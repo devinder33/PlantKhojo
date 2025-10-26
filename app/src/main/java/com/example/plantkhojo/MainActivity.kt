@@ -37,8 +37,8 @@ class MainActivity : ComponentActivity() {
         Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
             NavHost(
                 navController = navController,
-                //startDestination = "onboarding",
-                startDestination = "plant_detail",
+                startDestination = "onboarding",
+//                startDestination = "main",
                 modifier = Modifier.padding(innerPadding)
             ) {
                 // Onboarding Screen

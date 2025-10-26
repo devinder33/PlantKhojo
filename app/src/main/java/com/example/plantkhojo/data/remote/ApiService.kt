@@ -11,4 +11,6 @@ interface ApiService {
 
     @GET(GET_CHARACTERS)
     suspend fun getAllCharacters(): List<CharactersDto>
+
+
 }
